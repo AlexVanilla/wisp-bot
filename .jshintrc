@@ -1,0 +1,4 @@
+//Have jsHint in VS Code use ES6 and not have unnecessary warning
+{
+  "esversion": 6
+}
