@@ -63,7 +63,7 @@ const prefix = '~' // This is the prefix, you can change it to whatever you want
 client.on("message", message => {
 
     /*
-    NOTE: remnants for weather function.  It's not done...
+    NOTE: remnants for weather function.
 
         //Variables
         let sender = message.author; // The person who sent the message
