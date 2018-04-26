@@ -4,3 +4,10 @@ npm-debug.log
 .env
 .vscode/*
 Procfile
+
+
+
+# Error Outputs
+.sh.exe.stackdump
+sh.exe.stackdump
+bash.exe.stackdump
