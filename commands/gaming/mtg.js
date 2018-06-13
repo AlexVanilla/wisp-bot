@@ -5,7 +5,7 @@ module.exports = class MtgSearch extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'mtg',
-            group: 'random',
+            group: 'gaming',
             memberName: 'mtg',
             description: 'Searches mtg image',
             examples: ['!mtg <card name>'],

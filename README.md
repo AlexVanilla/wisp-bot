@@ -11,7 +11,7 @@ One of the functions was outputting navy copypasta. I deleted it to make it more
 
 discord.js-commando is a framework for discord.js
 
-Essentially, each command feature is is in the commands folder
+Essentially, each command feature is in the commands folder
 
 
 ## TODO/Roadmap
