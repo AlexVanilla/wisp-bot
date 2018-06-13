@@ -1,9 +1,9 @@
 //NOTE:  This command let's users assign a role that just modifies their name color.
-const commando = require('discord.js-commando');
+const Commando = require('discord.js-commando');
 
 //NOTE:  commands are classes exported with module.exports
 
-class ManaCommand extends commando.Command {
+class ManaCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'mana',  //name of the command
@@ -19,7 +19,7 @@ class ManaCommand extends commando.Command {
     //NOTE:  After this we need a run method
     //TESTING
     run(msg) {
-        return msg.say('Hi, I\'m awake!');  //NOTE:  .say() is commando's version of message.channel.send
+        return msg.say('Hi, I\'m awake!');  //NOTE:  .say() is Commando's version of message.channel.send
     }
 
 };

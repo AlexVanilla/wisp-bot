@@ -1,9 +1,20 @@
 # README
 
-Testing webhook and bot.  This was initially to mess around with discord webhook but I'm using this repo for my beloved discord bot
+For my first discord chatbot
 
-Utlizing discord.js and discord-commando.js
-
-Code is still in developement phase
+Utlizing discord.js and discord.js-commando
 
 One of the functions was outputting navy copypasta. I deleted it to make it more formal
+
+
+## Self Notes
+
+discord.js-commando is a framework for discord.js
+
+Essentially, each command feature is is in the commands folder
+
+
+## TODO/Roadmap
+
+* Clean up MTG search feature
+* Think of any features that would be considered useful to use on daily basis

@@ -1,7 +1,7 @@
-const commando = require('discord.js-commando');
+const Commando = require('discord.js-commando');
 const mtg = require('mtgsdk');
 
-module.exports = class MtgSearch extends commando.Command {
+module.exports = class MtgSearch extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'mtg',

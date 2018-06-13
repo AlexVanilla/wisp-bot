@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const Commando = require('discord.js-commando');
 const path = require('path');
 const Weather = require('weather-js'); //NOTE:  not implemented yet
-const mtg = require('mtgsdk'); //NOTE:  Not sure if need this
 
 /*
 client.on("ready", () => {
@@ -12,11 +11,12 @@ client.on("ready", () => {
 const client = new Commando.Client({
     commandPrefix: '!', //What you must type first to use bot command
     owner: process.env.OWNER_ID //Specify that I'm the owner so I can have full access to the bot from anywhere
-}); //NOTE:  commando is an extension of discord client
+}); //NOTE:  Commando is an extension of discord client
 
 client.registry
     //Register custom command groups
     .registerGroups([
+        ["gaming", "Game related commands"],
         ["test", `Under Testing (shouldn't be working right now)`],
         ["random", "Random Commands"],
         ["changelog", "Other"]
@@ -37,7 +37,7 @@ client.registry
 
 client.on('ready', () => {
     console.log('Wisp is logged in');
-    client.user.setGame('Mergic der Gertering');
+    client.user.setGame('Smash Bros. Ultimate');
     //NOTE:  If setGame() isn't working, use setActivity();
 })
 
