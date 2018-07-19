@@ -15,7 +15,7 @@ const Commando = require('discord.js-commando');
                     type: 'integer',
                     validate: number => {
                         number = parseInt(number); //Convert to integer
-                        if(Number.isInteger(number)) return true;
+                        if(Number.isInteger(number) && number != 0) return true;
                         return 'I need a whole number.  Like 1, 5, 4, etc';
                     }
                 }
@@ -24,7 +24,6 @@ const Commando = require('discord.js-commando');
     }
 
     run(message, { number }) {
-        console.log(number);
         message.reply("You rolled a:  " + (Math.floor(Math.random() * number) + 1));
     }
 };

@@ -12,7 +12,6 @@ module.exports = class SmashUltimateCountdown extends Commando.Command {
     }
 
     run(message) {
-        console.log(message);
         // Set the date we're counting down to
         let countDownDate = new Date("Dec 7, 2018 00:00:00").getTime();
 

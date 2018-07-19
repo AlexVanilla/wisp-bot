@@ -9,9 +9,10 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "discord.js-commando": "^0.9.0",
+    "dotenv": "^6.0.0",
     "hoek": "^5.0.3",
     "mtgsdk": "^0.3.0",
-    "npm": "^6.1.0",
+    "npm": "^6.2.0",
     "weather-js": "^2.0.0"
   },
   "engines": {

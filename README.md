@@ -9,9 +9,9 @@ One of the functions was outputting navy copypasta. I deleted it to make it more
 
 ## Self Notes
 
-discord.js-commando is a framework for discord.js
+discord.js-commando is an extension and framework for discord.js
 
-Essentially, each command feature is in the commands folder
+Essentially, each command feature is in the commands folder structure
 
 
 ## TODO/Roadmap
