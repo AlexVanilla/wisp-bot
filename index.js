@@ -31,10 +31,12 @@ client.registry
 
 client.on('ready', () => {
     console.log('Wisp is logged in');
-    client.user.setActivity('Anime', {
-        type: 'WATCHING'
+    client.user.setActivity('NairoMK', {
+        type: 'STREAMING',
+        url: 'https://www.twitch.tv/nairomk'
     });
 })
+
 
 // TODO: clean up code and implement the STREAMING activity type at some point
 // NOTE: reference to Twitch api
@@ -53,7 +55,6 @@ setInterval(() => {
         let currentActivityType = activityTypes[(Math.floor(Math.random() * activityTypes.length - 1) + 1)];
         let currentActivity = activities[currentActivityType][(Math.floor(Math.random() * activities[currentActivityType].length - 1) + 1)]
 
-        console.log(currentActivityType, currentActivity);
 
         // If Wisp bot streaming, use Twitch API to find live streamers
 
@@ -73,13 +74,19 @@ setInterval(() => {
 
         // Append twitch url
         let options = {
-            type: currentActivityType,
-            url: currentActivityType=='STREAMING'?'https://www.twitch.tv/' + streamers[0] : '' // TODO: array length for streamers
+            type: currentActivityType
         }
 
+        if (currentActivityType === 'STREAMING') {
+            options.url = 'https://www.twitch.tv/' + streamers[0] // TODO: array length for streamers
+
+        }
+
+        console.log(currentActivityType, currentActivity, options);
         client.user.setActivity(currentActivity, options);
     },
-    60000) // Change Activites every 30 mins
+    6000) // Change Activites every 30 mins
+// 1800000
 
 client.on('message', (message) => {
     if (message.content.startsWith("Wisp bot")) {
