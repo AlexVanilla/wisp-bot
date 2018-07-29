@@ -99,6 +99,9 @@ setInterval(() => {
                         type: 'STREAMING',
                         url: `https://www.twitch.tv/${login}`
                     })
+                    .catch(error => {
+                        console.log('Error setting activity', error.response.data);
+                    })
                 });
             })
             .catch(error => {
