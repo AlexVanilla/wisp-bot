@@ -82,6 +82,7 @@ setInterval(() => {
 
         // axios call
         axios.get(axiosUrl, axiosConfig).then(response => {
+                console.log('TEST', response)
                 let liveStreamers = response.data.data;
                 // Randomly choose one of the streamers that is currently live
                 let theChosenOne = liveStreamers[(Math.floor(Math.random() * liveStreamers.length))];
@@ -96,12 +97,12 @@ setInterval(() => {
 
                     console.log(streamerName, login);
                     client.user.setActivity(streamerName, {
-                        type: 'STREAMING',
-                        url: `https://www.twitch.tv/${login}`
-                    })
-                    .catch(error => {
-                        console.log('Error setting activity', error.response.data);
-                    })
+                            type: 'STREAMING',
+                            url: `https://www.twitch.tv/${login}`
+                        })
+                        .catch(error => {
+                            console.log('Error setting activity', error.response.data);
+                        })
                 });
             })
             .catch(error => {
