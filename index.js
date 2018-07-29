@@ -108,7 +108,7 @@ setInterval(() => {
             })
             .catch(error => {
                 console.log('ERROR', error)
-                console.log('ERROR', error.response.data);
+                // console.log('ERROR', error.response.data);
             })
 
     }
@@ -119,7 +119,7 @@ setInterval(() => {
 
 
 
-}, 10000) // Change Activites every hour
+}, 5000) // Change Activites every hour
 // 3600000
 client.on('message', (message) => {
     if (message.content.startsWith("Wisp bot")) {
