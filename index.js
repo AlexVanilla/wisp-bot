@@ -94,6 +94,7 @@ setInterval(() => {
                     let streamerName = response.data.data[0].display_name;
                     let login = response.data.data[0].login;
 
+                    console.log(streamerName, login);
                     client.user.setActivity(streamerName, {
                         type: 'STREAMING',
                         url: `https://www.twitch.tv/${login}`
@@ -112,8 +113,8 @@ setInterval(() => {
 
 
 
-}, 3600000) // Change Activites every hour
-
+}, 10000) // Change Activites every hour
+// 3600000
 client.on('message', (message) => {
     if (message.content.startsWith("Wisp bot")) {
         message.channel.send("*Beep boop*");
