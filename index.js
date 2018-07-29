@@ -107,6 +107,7 @@ setInterval(() => {
                 });
             })
             .catch(error => {
+                console.log('ERROR', error)
                 console.log('ERROR', error.response.data);
             })
 
