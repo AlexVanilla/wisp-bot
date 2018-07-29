@@ -116,8 +116,8 @@ setInterval(() => {
 
 
 
-}, 5000) // Change Activites every hour
-// 3600000
+}, 3600000) // Change Activites every hour
+
 client.on('message', (message) => {
     if (message.content.startsWith("Wisp bot")) {
         message.channel.send("*Beep boop*");
