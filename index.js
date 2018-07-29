@@ -92,6 +92,7 @@ setInterval(() => {
 
                 // https://api.twitch.tv/helix/users?id="USER_ID"
                 axios.get(`https://api.twitch.tv/helix/users?id=${theChosenOne.user_id}`, axiosConfig).then(response => {
+                    console.log('TEST 2', response)
                     let streamerName = response.data.data[0].display_name;
                     let login = response.data.data[0].login;
 
