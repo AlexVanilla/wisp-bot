@@ -82,7 +82,6 @@ setInterval(() => {
 
         // axios call
         axios.get(axiosUrl, axiosConfig).then(response => {
-                console.log('TEST', response)
                 let liveStreamers = response.data.data;
                 // Randomly choose one of the streamers that is currently live
                 let theChosenOne = liveStreamers[(Math.floor(Math.random() * liveStreamers.length))];
@@ -92,7 +91,6 @@ setInterval(() => {
 
                 // https://api.twitch.tv/helix/users?id="USER_ID"
                 axios.get(`https://api.twitch.tv/helix/users?id=${theChosenOne.user_id}`, axiosConfig).then(response => {
-                    console.log('TEST 2', response)
                     let streamerName = response.data.data[0].display_name;
                     let login = response.data.data[0].login;
 
@@ -107,8 +105,7 @@ setInterval(() => {
                 });
             })
             .catch(error => {
-                console.log('ERROR', error)
-                // console.log('ERROR', error.response.data);
+                console.log('ERROR', error.response.data);
             })
 
     }
